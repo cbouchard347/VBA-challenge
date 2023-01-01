@@ -22,9 +22,9 @@ Sub HW2()
         ws.Cells(1, 12).Value = "Total Stock Volume"
         ws.Cells(1, 16).Value = "Ticker"
         ws.Cells(1, 17).Value = "Value"
-        ws.Cells(1, 15).Value = "Greatest % Increase"
-        ws.Cells(2, 15).Value = "Greatest % Decrease"
-        ws.Cells(3, 15).Value = "Greatest Total Volume"
+        ws.Cells(2, 15).Value = "Greatest % Increase"
+        ws.Cells(3, 15).Value = "Greatest % Decrease"
+        ws.Cells(4, 15).Value = "Greatest Total Volume"
                 
         Ticker_Count = 2
         
@@ -79,30 +79,18 @@ Sub HW2()
                 If ws.Cells(i, 12).Value > Greatest_Volume Then
                 Greatest_Volume = ws.Cells(i, 12).Value
                 ws.Cells(4, 16).Value = ws.Cells(i, 9).Value
-                
-                Else
-                
-                Greatest_Volume = Greatest_Volume
-                
+                            
                 End If
                 
                 If ws.Cells(i, 11).Value > Greatest_Percent_Increase Then
                 Greatest_Percent_Increase = ws.Cells(i, 11).Value
                 ws.Cells(2, 16).Value = ws.Cells(i, 9).Value
                 
-                Else
-                
-                Greatest_Percent_Increase = Greatest_Percent_Increase
-                
                 End If
                 
                 If ws.Cells(i, 11).Value < Greatest_Percent_Decrease Then
                 Greatest_Percent_Decrease = ws.Cells(i, 11).Value
                 ws.Cells(3, 16).Value = ws.Cells(i, 9).Value
-                
-                Else
-                
-                Greatest_Percent_Decrease = Greatest_Percent_Decrease
                 
                 End If
 
